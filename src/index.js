@@ -1,9 +1,5 @@
 import TelegramBot from 'node-telegram-bot-api';
-import dotenv from 'dotenv';
 import { handleMessage } from './bot.js';
-
-// Load environment variables for local development
-dotenv.config();
 
 const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const ALLOWED_USER_ID = process.env.ALLOWED_USER_ID;

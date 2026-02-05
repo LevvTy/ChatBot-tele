@@ -2,11 +2,11 @@
   "name": "mental-log-bot",
   "version": "1.0.0",
   "description": "Personal mental log bot - Telegram bot để ghi mood và thoughts",
-  "main": "src/index.js",
+  "main": "api/index.js",
   "type": "module",
   "scripts": {
-    "start": "node -r dotenv/config src/index.js",
-    "dev": "node -r dotenv/config --watch src/index.js"
+    "start": "node -r dotenv/config api/index.js",
+    "dev": "node -r dotenv/config --watch api/index.js"
   },
   "keywords": [
     "telegram",

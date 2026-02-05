@@ -1,5 +1,5 @@
 import TelegramBot from 'node-telegram-bot-api';
-import { handleMessage } from './bot.js';
+import { handleMessage } from './src/bot.js';
 
 // Lazy-initialized bot instance
 let botInstance = null;

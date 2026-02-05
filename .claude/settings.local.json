@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(npm install dotenv)",
+      "Bash(tree:*)",
+      "Bash(node --check:*)",
+      "Bash(npm install openai)",
+      "Bash(npm install sentiment)",
+      "WebFetch(domain:console.groq.com)"
+    ]
+  }
+}

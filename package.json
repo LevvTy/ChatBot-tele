@@ -1,0 +1,24 @@
+{
+  "name": "mental-log-bot",
+  "version": "1.0.0",
+  "description": "Personal mental log bot - Telegram bot để ghi mood và thoughts",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "keywords": [
+    "telegram",
+    "mental-health",
+    "logging"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "node-telegram-bot-api": "^0.67.0",
+    "sentiment": "^5.0.2",
+    "groq-sdk": "^0.3.0"
+  }
+}

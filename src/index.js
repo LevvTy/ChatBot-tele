@@ -15,9 +15,16 @@ export default async (req, res) => {
   const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
   const ALLOWED_USER_ID = process.env.ALLOWED_USER_ID;
 
+  // Log environment variables for debugging on Vercel
+  console.log('Vercel ENV Debug: TOKEN present:', !!TOKEN);
+  console.log('Vercel ENV Debug: ALLOWED_USER_ID present:', !!ALLOWED_USER_ID);
+  console.log('Vercel ENV Debug: GROQ_API_KEY present:', !!process.env.GROQ_API_KEY);
+
   if (!TOKEN) {
-    console.error('❌ TELEGRAM_BOT_TOKEN is not set. Ensure it is configured in .env (for local) or Vercel Environment Variables (for deployment).');
-    return res.status(500).send('Bot Token is not configured.');
+    console.error('❌ TELEGRAM_BOT_TOKEN is not set. Cannot initialize bot.');
+    // Important: respond with 200 OK to Telegram even if token is missing
+    // to avoid continuous webhook attempts/errors from Telegram.
+    return res.status(200).send('Bot Token is not configured, but received update.');
   }
 
   // Initialize bot instance once per cold start of the serverless function.
